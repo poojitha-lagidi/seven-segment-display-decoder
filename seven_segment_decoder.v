@@ -1,6 +1,6 @@
 
 
-module hex_7seg_decoder(
+module seven_segment_decoder(
     input  [3:0]in,
     output reg a,
 	output reg b,
@@ -35,8 +35,7 @@ module hex_7seg_decoder(
 	    endcase
     end
 	
-    // If you want the dot open assign 1 to it
-	// ptherwise 0
+    // If you want the dot open assign 1 to it otherwise 0
     assign dot = 1'b1;
 
 endmodule
@@ -44,7 +43,7 @@ endmodule
 
 `timescale 1us/1ns
 
-module hex_7seg_decoder_tb();
+module seven_segment_decoder_tb();
 	
 	// Testbench variables
     reg  [3:0]in;
@@ -53,7 +52,7 @@ module hex_7seg_decoder_tb();
     integer i; 
 	
     // Instantiate the DUT 
-	hex_7seg_decoder DEC_7SEG(
+	seven_segment_decoder DEC_7SEG(
 		.in(in),
 		.a(a),
 		.b(b),
