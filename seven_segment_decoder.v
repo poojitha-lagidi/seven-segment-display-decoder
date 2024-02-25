@@ -3,7 +3,7 @@
 module seven_segment_decoder(
     input  [3:0]in,
     output reg a,
-	output reg b,
+    output reg b,
     output reg c,
     output reg d,
     output reg e,
@@ -12,8 +12,7 @@ module seven_segment_decoder(
     output dot
     );
 	
-	// Use concatenation to pass values to all
-	// outputs in the same time
+	// Using concatenation to pass values to all outputs in the same time
 	always @(*) begin
 		case (in)
 		4'd0 : {a,b,c,d,e,f,g} = 7'b1111110;
@@ -45,7 +44,7 @@ endmodule
 
 module seven_segment_decoder_tb();
 	
-	// Testbench variables
+   // Testbench variables
     reg  [3:0]in;
     wire a, b, c, d, e, f, g;
     wire dot;
